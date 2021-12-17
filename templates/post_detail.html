@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Post</title>
+</head>
+<body>
+<div>
+    <h2>{{post.title}}</h2>
+    <p>{{post.description}}</p>
+    <img src="{{post.image.url}}" alt="">
+    <br><br>
+    Created Date:<p>{{post.created_date}}</p>
+    Updated Date:<p>{{post.updated_date}}</p>
+
+</div>
+<div>
+    <h2> Comments:</h2>
+    <ul>
+        {% for i in post_comment.all %}
+        <li>
+            <p> {{i.text}} </p>
+            <p> {{i.created_date}} </p>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/add-comment/">Add Comment</a>
+</div>
+</body>
+</html>
