@@ -6,12 +6,12 @@
 </head>
 <body>
 <div>
-    <h2>{{post.title}}</h2>
-    <p>{{post.description}}</p>
-    <img src="{{post.image.url}}" alt="">
+    <h2>{{object.title}}</h2>
+    <p>{{object.description}}</p>
+    <img src="{{object.image.url}}" alt="">
     <br><br>
-    Created Date:<p>{{post.created_date}}</p>
-    Updated Date:<p>{{post.updated_date}}</p>
+    Created Date:<p>{{object.created_date}}</p>
+    Updated Date:<p>{{object.updated_date}}</p>
 
 </div>
 <div>
@@ -24,6 +24,8 @@
         </li>
         {% endfor %}
     </ul>
+    <a href="/posts/{{object.id}}/update/">Update?</a>
+    <a href="/posts/{{object.id}}/delete/">Delete?</a>
     <a href="/add-comment/">Add Comment</a>
 </div>
 </body>

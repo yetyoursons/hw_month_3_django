@@ -6,7 +6,7 @@
 </head>
 <body>
 <div>
-    <form action="/add-post/" method = "POST">
+    <form action="/add-post/" method = "POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Add Post"/>
